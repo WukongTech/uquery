@@ -13,6 +13,7 @@ host = '<your db host>'
 port = '<your db port>'
 user = '<your db username>'
 password = '<your db password>'
+database = '<your db database>'
 writable = false
 ```
 
