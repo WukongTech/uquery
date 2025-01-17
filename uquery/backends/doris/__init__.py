@@ -1,0 +1,1 @@
+from uquery.backends.doris.doris_backend import ibis_doris

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "uquery"
+description = "Abstract away the complexity of multi-data source access with a unified interface"
+authors = [
+    {name = "wukong_tech", email = "lianghua@wukongtz.com"},
+]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+#    "Framework :: Django",
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["version"]
+dependencies = [
+    "requests",
+    "oracledb",
+    "psycopg2-binary",
+    "sqlalchemy",
+    "pandas<2.2.0",
+    "pydash",
+    "cx_Oracle",
+    "toml",
+    "tqdm",
+    "sqlparse",
+    "ibis-framework[mysql]==7.1.0",
+    "sqlalchemy-doris[pymysql]==0.2.2",
+    "adbc_driver_manager",
+    "adbc_driver_flightsql"
+]
+
+[tool.setuptools_scm]
+write_to = "uquery/_version.py"
+
+[tool.setuptools.dynamic]
+version = {attr = "uquery._version.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["uquery"]
+namespaces = false
