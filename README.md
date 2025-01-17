@@ -30,3 +30,10 @@ import uquery
 data: pd.DataFrame = uquery.read_sql('select * from table', endpoint='my_data_src')
 print(data)
 ```
+
+
+## Installation
+
+```bash
+pip install uquery
+```
