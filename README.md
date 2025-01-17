@@ -13,11 +13,12 @@ host = '<your db host>'
 port = '<your db port>'
 user = '<your db username>'
 password = '<your db password>'
+writable = false
 ```
 
 We currently support the following database types:
 * oracle
-* postgres
+* postgresql
 * doris
 
 
